@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    // Visit https://aka.ms/tsconfig to read more about this file
+
+    /* Language and Environment */
+    "target": "esnext",
+
+    /* Modules */
+    "module": "commonjs",
+    "rootDir": "./src",
+
+    /* Emit */
+    "sourceMap": true,
+    "outDir": "./dist",
+    "removeComments": true,
+
+    /* Interop  Constraints*/
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    /* Type  Checking*/
+    "strict": true,
+    "noImplicitAny": true,
+
+    /* Completeness */
+    "skipLibCheck": true
+  }
+}

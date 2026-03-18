@@ -1,0 +1,31 @@
+{
+  "name": "to-do-express",
+  "version": "0.0.0",
+  "description": "Trello clone",
+  "homepage": "https://github.com/admitruk237/to-do-express#readme",
+  "bugs": {
+    "url": "https://github.com/admitruk237/to-do-express/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/admitruk237/to-do-express.git"
+  },
+  "license": "ISC",
+  "author": "Andrii Dmytruk",
+  "type": "commonjs",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "ts-node src/index",
+    "dev": "nodemon --exec ts-node src/index.ts"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "nodemon": "^3.1.14",
+    "prettier": "^3.8.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
