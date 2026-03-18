@@ -15,14 +15,15 @@
   "type": "commonjs",
   "main": "src/index.ts",
   "scripts": {
-    "start": "ts-node src/index",
-    "dev": "nodemon --exec ts-node src/index.ts"
+    "start": "dotenv -- ts-node src/index",
+    "dev": "dotenv -- nodemon --exec ts-node src/index.ts"
   },
   "dependencies": {
     "express": "^5.2.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
+    "dotenv-cli": "^11.0.0",
     "nodemon": "^3.1.14",
     "prettier": "^3.8.1",
     "ts-node": "^10.9.2",
