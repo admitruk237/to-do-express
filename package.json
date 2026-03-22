@@ -16,13 +16,17 @@
   "main": "src/index.ts",
   "scripts": {
     "start": "dotenv -- ts-node src/index",
-    "dev": "dotenv -- nodemon --exec ts-node src/index.ts"
+    "dev": "dotenv -- nodemon --exec ts-node src/index.ts",
+    "build": "tsc",
+    "format": "prettier --write ."
   },
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "sqlite3": "^6.0.1"
   },
   "devDependencies": {
     "@types/express": "^5.0.6",
+    "@types/node": "^25.5.0",
     "dotenv-cli": "^11.0.0",
     "nodemon": "^3.1.14",
     "prettier": "^3.8.1",
