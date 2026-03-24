@@ -1,9 +1,10 @@
 import { Request, Response } from 'express';
-import { IdParams } from '../../types/common';
+
 import { Card, CreateCardRequest } from '../../types/cards';
+import { CardIdParams } from '../../types/common';
 
 export const validateCardInput = (
-  { body }: Request<IdParams, Card, CreateCardRequest>,
+  { body }: Request<CardIdParams, Card, CreateCardRequest>,
   response: Response,
   next: () => void,
 ): void => {

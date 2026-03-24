@@ -10,7 +10,7 @@ export const createTable = async (): Promise<void> => {
   await sqliteRun(`
         CREATE TABLE IF NOT EXISTS columns (
         id TEXT PRIMARY KEY,
-        text TEXT NOT NULL,
+        name TEXT NOT NULL,
         board_id TEXT NOT NULL,
         FOREIGN KEY (board_id) REFERENCES boards(id)
         )

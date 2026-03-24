@@ -1,10 +1,10 @@
 import { Request, Response } from 'express';
 
-import { Board, CreateBoardRequest } from '../../types/boards';
-import { BoardIdParams } from '../../types/common';
+import { Column, CreateColumnRequest } from '../../types/columns';
+import { ColumnIdParams } from '../../types/common';
 
-export const validateBoardInput = (
-  { body }: Request<BoardIdParams, Board, CreateBoardRequest>,
+export const validateColumnInput = (
+  { body }: Request<ColumnIdParams, Column, CreateColumnRequest>,
   response: Response,
   next: () => void,
 ): void => {
