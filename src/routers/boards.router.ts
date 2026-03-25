@@ -1,5 +1,10 @@
 import express, { Response, Request } from 'express';
-import { GetBoardsResponse, Board, CreateBoardRequest } from '../types/boards';
+import {
+  GetBoardsResponse,
+  Board,
+  CreateBoardRequest,
+  GetBoardResponse,
+} from '../types/boards';
 
 import {
   createBoard,
@@ -24,14 +29,16 @@ boardsRouter.get(
 boardsRouter.get(
   '/:boardId',
   async (
-    request: Request<BoardIdParams, {}>,
-    response: Response<Board | string>,
+    request: Request<BoardIdParams>,
+    response: Response<GetBoardResponse | string>,
   ) => {
     const board = await getOneBoard(request.params.boardId);
+
     if (!board) {
       response.status(404).send('Board not found');
       return;
     }
+
     response.send(board);
   },
 );
